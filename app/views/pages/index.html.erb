@@ -1,6 +1,8 @@
-<div id="buttons" class="buttons"><button type="button" class="btn btn-default" onclick="showLogin()">Sign In</button> <button type="button" class="btn btn-default">Subscribe</button> </div>
+<div id="buttons" class="buttons"><button type="button" class="btn btn-default" onclick="showLogin()">Sign In</button> <button type="button" onClick="parent.location='<%= new_user_path %>'" class="btn btn-default">Subscribe</button> </div>
+
+
 <div id="login_fields" class="login_fields">
-  <form class="form-inline">
+  <form class="form-inline" action="/login" method="post">
     <div class="form-group">
       <label for="exampleInputName2">Name</label>
       <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
