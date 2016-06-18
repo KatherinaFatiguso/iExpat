@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :industries
   resources :languages
   resources :users
   resources :users

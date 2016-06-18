@@ -11,16 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160618062549) do
+ActiveRecord::Schema.define(version: 20160618063847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "industries", force: :cascade do |t|
+    t.string   "name"
+    t.text     "keywords"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "languages", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "user_industries", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "industry_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "user_industries", ["industry_id"], name: "index_user_industries_on_industry_id", using: :btree
+  add_index "user_industries", ["user_id"], name: "index_user_industries_on_user_id", using: :btree
 
   create_table "user_languages", force: :cascade do |t|
     t.integer  "user_id"
@@ -43,6 +60,8 @@ ActiveRecord::Schema.define(version: 20160618062549) do
     t.datetime "updated_at",                   null: false
   end
 
+  add_foreign_key "user_industries", "industries"
+  add_foreign_key "user_industries", "users"
   add_foreign_key "user_languages", "languages"
   add_foreign_key "user_languages", "users"
 end
