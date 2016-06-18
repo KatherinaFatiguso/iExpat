@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  passport_country: MyString
+  dob: 2016-06-18
+  gender: MyString
+  marital: MyString
+  children: 1
+
+two:
+  name: MyString
+  passport_country: MyString
+  dob: 2016-06-18
+  gender: MyString
+  marital: MyString
+  children: 1
