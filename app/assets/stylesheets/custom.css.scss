@@ -1,0 +1,19 @@
+
+  body {
+    background-image: url(image_path('iExpat.jpg'));
+    background-position: center top;
+    background-size: 100%;
+  }
+
+  .buttons {
+    text-align: right;
+    margin-top: 2%;
+  }
+
+  .login_fields {
+    text-align: right;
+    margin-top: 2%;
+    color: whitesmoke;
+    visibility: hidden;
+  }
+

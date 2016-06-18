@@ -29,13 +29,13 @@ development:
   encoding: unicode
   database: iExpat_development
   pool: 5
-  username: katherinafatiguso
-  password:
+  username: pguser
+  password: pguser
 
 test:
   adapter: postgresql
   encoding: unicode
   database: iExpat_test
   pool: 5
-  username: katherinafatiguso
-  password: 
+  username: pguser
+  password: pguser
