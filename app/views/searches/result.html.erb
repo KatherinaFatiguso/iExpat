@@ -1,0 +1,51 @@
+
+  <script type="text/javascript">
+    window.onload = function () {
+      var chart = new CanvasJS.Chart("chartContainer",
+          {
+            title:{
+              text: "Australia"
+            },
+            toolTip:{
+              content: "{label}"
+            },
+            axisX:{
+              tickLength: 0,
+              tickThickness: 0,
+              lineThickness: 0,
+              valueFormatString:" ",
+              gridThickness: 0
+            },
+            axisY:{
+              tickLength: 0,
+              tickThickness: 0,
+              lineThickness: 0,
+              valueFormatString:" ",
+              gridThickness: 0},
+            data: [
+
+              {
+                type: "bar",//the value for each result will be here
+                dataPoints: [
+                  { y: 166, label: "Visa"},
+                  { y: 185, label: "Job Offers"},
+                  { y: 166, label: "Cost of Living"},
+                  { y: 198, label: "Safety"}
+                ]
+              }
+            ]
+          }
+      );
+
+      chart.render();
+    }
+  </script>
+
+
+<div class="blurred_flag">
+  <img src="assets/new-south-wales.jpg" height="127px" width="196.391px"></div>
+<div class="flag">
+  <img src="assets/new-south-wales.jpg" height="127px" width="196.391px"></div>
+<div class="data1" id="chartContainer" ></div>
+</body>
+</html>

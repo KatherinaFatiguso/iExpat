@@ -1,8 +1,9 @@
 
   body {
-    background-image: url(image_path('iExpat.jpg'));
+    background-image: url(('iExpat.jpg'));
     background-position: center top;
     background-size: 100%;
+    text-align: right;
   }
 
   .buttons {
@@ -17,3 +18,63 @@
     visibility: hidden;
   }
 
+  label, h2, em{
+    text-align: right;
+    color: whitesmoke;
+  }
+
+  .btext {
+    text-align: right;
+  }
+
+
+  .data1 {
+    height: 127px;
+    width: 196.391px;
+    opacity: 0;
+    margin-top:5%;
+    position:absolute;
+  }
+
+  .data1:hover {
+    height: 127px;
+    width: 196.391px;
+    opacity: 0.7;
+    margin-top:5%;
+    position:absolute;
+  }
+
+  .flag {
+    height: 127px;
+    width: 196.391px;
+    margin-top:5%;
+    position:absolute;
+  }
+
+  .flag:hover {
+    height: 127px;
+    width: 196.391px;
+    opacity: 0;
+    margin-top:5%;
+    position:absolute;
+  }
+
+  .blurred_flag {
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0.4 ;
+    height: 127px;
+    width: 196.391px;
+    margin-top:5%;
+    position:absolute;
+  }
+
+  .blurred_flag:hover{
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0.5;
+    height: 127px;
+    width: 196.391px;
+    margin-top:5%;
+    position:absolute;
+  }

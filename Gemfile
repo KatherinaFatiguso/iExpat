@@ -47,4 +47,11 @@ group :development, :test do
   gem 'bootstrap-sass', '~> 3.3.6'
   gem 'sprockets-rails', '>= 2.1.4'
 
+  #Adding Devise for authentication
+  gem 'devise'
+
+  #Adding bootstrapdatetime picker
+  gem 'momentjs-rails', '>= 2.10.6'
+  gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'
+
 end
