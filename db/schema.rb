@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160619013707) do
+ActiveRecord::Schema.define(version: 20160619014215) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,16 @@ ActiveRecord::Schema.define(version: 20160619013707) do
 
   add_index "country_languages", ["country_id"], name: "index_country_languages_on_country_id", using: :btree
   add_index "country_languages", ["language_id"], name: "index_country_languages_on_language_id", using: :btree
+
+  create_table "country_skills", force: :cascade do |t|
+    t.integer  "country_id"
+    t.integer  "industry_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "country_skills", ["country_id"], name: "index_country_skills_on_country_id", using: :btree
+  add_index "country_skills", ["industry_id"], name: "index_country_skills_on_industry_id", using: :btree
 
   create_table "industries", force: :cascade do |t|
     t.string   "name"
@@ -91,6 +101,8 @@ ActiveRecord::Schema.define(version: 20160619013707) do
 
   add_foreign_key "country_languages", "countries"
   add_foreign_key "country_languages", "languages"
+  add_foreign_key "country_skills", "countries"
+  add_foreign_key "country_skills", "industries"
   add_foreign_key "user_industries", "industries"
   add_foreign_key "user_industries", "users"
   add_foreign_key "user_languages", "languages"

@@ -4,7 +4,7 @@ class IndustriesController < ApplicationController
   # GET /industries
   # GET /industries.json
   def index
-    @industries = Industry.all
+    @industries = Industry.search(params[:keyword])
   end
 
   # GET /industries/1

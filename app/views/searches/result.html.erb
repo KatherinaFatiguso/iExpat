@@ -1,13 +1,13 @@
 <html>
   <body>
 
-    <div id="buttons" class="buttons">
+    <!-- <div id="buttons" class="buttons">
       <button type="button" class="btn btn-default" onclick="showLogin()">Sign In</button>
       <button type="button" onClick="parent.location='<%= new_user_registration_path %>'" class="btn btn-default">Sign Up</button>
-    </div>
+    </div> -->
 
 
-      <script type="text/javascript">
+      <!-- <script type="text/javascript">
         window.onload = function () {
           var chart = new CanvasJS.Chart("chartContainer",
               {
@@ -54,9 +54,19 @@
       <img src="assets/new-south-wales.jpg" height="127px" width="196.391px"></div>
     <div class="flag">
       <img src="assets/new-south-wales.jpg" height="127px" width="196.391px"></div>
-    <div class="data1" id="chartContainer" ></div>
-    <%= link_to "Sign In", user_session_path, class: 'btn' %>
-    <%= link_to "Register to get started", new_user_registration_path, class: 'btn' %>
+    <div class="data1" id="chartContainer" ></div> -->
+
+
+    <%#= link_to "Sign In", user_session_path, class: 'btn' %>
+    <%#= link_to "Register to get started", new_user_registration_path, class: 'btn' %>
+
+    <% if user_signed_in? %>
+      <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+    <% else %>
+      <li><%= link_to "Sign In", new_user_session_path %></li>
+    <% end %>
+
+    <%= link_to "Search Available Skills", industries_path, class: 'btn' %>
 
   </body>
 </html>
