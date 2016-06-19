@@ -11,5 +11,12 @@
  * file per style scope.
  */
  @import "bootstrap-sprockets";
+ @import "materialize";
+ @import "materialize/components/color";
  @import "bootstrap";
  @import "custom";
+
+
+ .black-text {
+  color: black;
+}

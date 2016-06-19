@@ -49,6 +49,8 @@ group :development, :test do
 
   #Adding Devise for authentication
   gem 'devise'
+  gem 'materialize-sass'
+
 
   #Adding bootstrapdatetime picker
   gem 'momentjs-rails', '>= 2.10.6'

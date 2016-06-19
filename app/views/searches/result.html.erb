@@ -1,51 +1,62 @@
+<html>
+  <body>
 
-  <script type="text/javascript">
-    window.onload = function () {
-      var chart = new CanvasJS.Chart("chartContainer",
-          {
-            title:{
-              text: "Australia"
-            },
-            toolTip:{
-              content: "{label}"
-            },
-            axisX:{
-              tickLength: 0,
-              tickThickness: 0,
-              lineThickness: 0,
-              valueFormatString:" ",
-              gridThickness: 0
-            },
-            axisY:{
-              tickLength: 0,
-              tickThickness: 0,
-              lineThickness: 0,
-              valueFormatString:" ",
-              gridThickness: 0},
-            data: [
+    <div id="buttons" class="buttons">
+      <button type="button" class="btn btn-default" onclick="showLogin()">Sign In</button>
+      <button type="button" onClick="parent.location='<%= new_user_registration_path %>'" class="btn btn-default">Sign Up</button>
+    </div>
 
+
+      <script type="text/javascript">
+        window.onload = function () {
+          var chart = new CanvasJS.Chart("chartContainer",
               {
-                type: "bar",//the value for each result will be here
-                dataPoints: [
-                  { y: 166, label: "Visa"},
-                  { y: 185, label: "Job Offers"},
-                  { y: 166, label: "Cost of Living"},
-                  { y: 198, label: "Safety"}
+                title:{
+                  text: "Australia"
+                },
+                toolTip:{
+                  content: "{label}"
+                },
+                axisX:{
+                  tickLength: 0,
+                  tickThickness: 0,
+                  lineThickness: 0,
+                  valueFormatString:" ",
+                  gridThickness: 0
+                },
+                axisY:{
+                  tickLength: 0,
+                  tickThickness: 0,
+                  lineThickness: 0,
+                  valueFormatString:" ",
+                  gridThickness: 0},
+                data: [
+
+                  {
+                    type: "bar",//the value for each result will be here
+                    dataPoints: [
+                      { y: 166, label: "Visa"},
+                      { y: 185, label: "Job Offers"},
+                      { y: 166, label: "Cost of Living"},
+                      { y: 198, label: "Safety"}
+                    ]
+                  }
                 ]
               }
-            ]
-          }
-      );
+          );
 
-      chart.render();
-    }
-  </script>
+          chart.render();
+        }
+      </script>
 
 
-<div class="blurred_flag">
-  <img src="assets/new-south-wales.jpg" height="127px" width="196.391px"></div>
-<div class="flag">
-  <img src="assets/new-south-wales.jpg" height="127px" width="196.391px"></div>
-<div class="data1" id="chartContainer" ></div>
-</body>
+    <div class="blurred_flag">
+      <img src="assets/new-south-wales.jpg" height="127px" width="196.391px"></div>
+    <div class="flag">
+      <img src="assets/new-south-wales.jpg" height="127px" width="196.391px"></div>
+    <div class="data1" id="chartContainer" ></div>
+    <%= link_to "Sign In", user_session_path, class: 'btn' %>
+    <%= link_to "Register to get started", new_user_registration_path, class: 'btn' %>
+
+  </body>
 </html>

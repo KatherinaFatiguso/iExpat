@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  resources :countries
   root 'searches#result'
+  # root 'pages#home'
   get 'search' => 'searches#result'
   devise_for :users
   resources :industries
